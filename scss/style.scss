@@ -1,0 +1,354 @@
+@import "normalize";
+@import "layout";
+@import "elements";
+
+$primer-color: #3E3B4A;
+$grey: #898691;
+$orange: #FFC7B4;
+$white: #fff;
+$yellow: #FFE18F;
+$coral: #EB7B61;
+$ffOld: 'Old Standard TT', serif;
+body {
+ background-color: $primer-color;
+}
+
+/* Layout */
+.ba-container {
+ padding-left: 20px;
+ padding-right: 20px;
+ max-width: 1200px;
+
+}
+
+.ba-nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding-top: 70px;
+ padding-bottom: 70px;
+
+ a {
+  display: flex;
+  align-items: center;
+  color: $grey;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Arial;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: .2em;
+  transition: color .3s ease-in;
+
+  svg {
+   transition: fill .3s ease-in;
+  }
+
+  &:hover {
+   color: $white;
+
+   svg {
+    fill: $white;
+   }
+  }
+
+ }
+}
+
+.icon {
+ height: 25px;
+ width: 25px;
+ fill: $grey;
+ margin-right: 10px;
+}
+
+.icon-search {
+ margin-left: 7px;
+ transform: rotate(90deg);
+}
+
+.ba-home {
+ background: $primer-color url("../img/bglamp.jpg") no-repeat;
+ background-size: cover;
+ padding: 50px 50px;
+
+
+}
+
+.ba-home-link {
+ color: $orange;
+ text-decoration: none;
+ text-transform: uppercase;
+ font-family: Arial;
+ font-weight: 800;
+ font-size: 15px;
+ letter-spacing: .2em;
+ margin-bottom: 20px;
+ transition: color .3s ease-in;
+
+ &:hover {
+  color: $white;
+ }
+
+}
+
+.ba-title {
+ color: $white;
+ //font-family: Arial;
+ font-weight: 800;
+ font-size: 40px;
+ margin-top: 0;
+ margin-bottom: 0.5em;
+
+ //line-height: 0.8em;
+ @media only screen and (min-width: 640px) {
+  font-size: 56px
+ }
+ @media only screen and (min-width: 1024px) {
+  font-size: 72px;
+  margin-bottom: 20px;
+ }
+}
+
+.ba-paragraph {
+ color: $white;
+ //font-family: Arial;
+ font-weight: 500;
+ font-size: 30px;
+ margin-top: 0;
+ margin-bottom: 0.5em;
+ padding-right: 20px;
+ @media only screen and (min-width: 640px) {
+  font-size: 42px;
+ }
+ @media only screen and (min-width: 1024px) {
+  font-size: 50px;
+  margin-bottom: 75px;
+ }
+}
+
+.read-more {
+ border: 2px $yellow solid;
+ padding: 10px;
+ color: $white;
+ text-decoration: none;
+ font-weight: 800;
+ font-size: 15px;
+ display: inline-block;
+ transition: background-color 0.3s ease-in, color 0.3s ease-in;
+
+ &:hover {
+  background-color: $yellow;
+  color: #000;
+ }
+}
+
+.ba-info {
+ padding-top: 20px;
+ padding-bottom: 20px;
+}
+
+.ba-peak-wrap {
+ background: $primer-color url("../img/bgbag.jpg") no-repeat;
+ background-size: cover;
+ padding: 50px;
+ height: 100%;
+
+}
+
+.ba-home-Link--no-spacing {
+ letter-spacing: 0em;
+ display: inline-block;
+ margin-bottom: 20px;
+}
+
+.ba-title--small {
+ font-weight: 600;
+ font-size: 30px;
+ @media only screen and (min-width: 640px) {
+  font-size: 45px;
+ }
+ @media only screen and (min-width: 1024px) {
+  font-size: 60px;
+ }
+}
+
+.ba-paragraph--peak {
+ font-size: 17px;
+ width: 50%;
+ @media only screen and (min-width: 640px) {
+  font-size: 22px;
+ }
+ @media only screen and (min-width: 1024px) {
+  font-size: 30px;
+ }
+}
+
+.ba-form-wrap {
+ background-color: $coral;
+ padding: 30px;
+}
+
+.ba-title-form {
+ font-family: $ffOld;
+ font-weight: 700;
+ font-size: 35px;
+ color: $white;
+ text-align: center;
+ margin-top: 0;
+ margin-bottom: 0.2em;
+@media only screen and (min-width: 640px) {
+ font-size: 45px;
+}
+ @media only screen and (min-width: 1024px) {
+  font-size: 53px;
+ }
+ &:after {
+  content: "";
+
+ }
+}
+
+.ba-subtitle {
+ font-family: $ffOld;
+ font-weight: 400;
+ font-size: 19px;
+ color: $white;
+ margin-top: 0;
+ margin-bottom: 1.5em;
+
+@media only screen and (min-width: 640px) {
+ font-size: 20px;
+}
+ @media only screen and (min-width: 1024px) {
+  font-size: 25px;
+ }
+}
+
+.ba-form__email, .ba-form__button {
+ display: block;
+ padding: 12px;
+ border: 2px $white solid;
+ background-color: $coral;
+ text-align: center;
+ width: 100%;
+ margin-bottom: 22px;
+ &:focus{
+   outline: 0;
+ }
+ &::placeholder {
+  color: $white;
+  font-size: 17px;
+  font-weight: 600 ;
+  @media only screen and (min-width: 640px) {
+   font-size: 18px;
+  }
+  @media only screen and (min-width: 1024px) {
+   font-size: 20px;
+  }
+
+ }
+
+}
+.ba-form__button{
+ background-color: #66689C;
+ border-color: #66689C;
+ color: $white;
+ font-size: 17px;
+ font-weight: 600 ;
+ @media only screen and (min-width: 640px) {
+  font-size: 18px;
+ }
+ @media only screen and (min-width: 1024px) {
+  font-size: 20px;
+ }
+}
+.ba-margin-col{
+@media only screen and (max-width: 1024px) {
+ margin-bottom: 20px;
+ }
+}
+.ba-subtibitle--small {
+ font-size: 17px;
+ margin-bottom: 0;
+}
+.ba-cameras-wrap{
+ padding-top: 20px;
+ padding-bottom: 20px;
+}
+.ba-background-leicaM{
+ background: $primer-color url("../img/bgcamera.jpg");
+ padding: 50px  20px;
+ background-size: cover;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+ justify-content: space-between;
+ align-items: center;
+ }
+.ba-link-cameras{
+color: $orange;
+text-decoration: none;
+text-transform: uppercase;
+font-family: Arial;
+font-weight: 800;
+font-size: 14px;
+//letter-spacing: .2em;
+margin-bottom: 6.67em;
+ display: block;
+ text-align: center;
+transition: color .3s ease-in;
+
+&:hover {
+ color: $white;
+}
+}
+.ba-title--xsmall{
+ font-size: 36px;
+ font-weight: 600;
+  margin-bottom: 1.67em ;
+}
+.ba-background-trobla{
+ background: $primer-color url("../img/bgsound.jpg");
+ padding:  50px 20px ;
+ background-size: cover;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+ justify-content: space-between;
+ align-items: center;
+}
+.ba-background-leicaD{
+ background: $primer-color url("../img/bgcameras.jpg");
+ padding:  50px 20px ;
+ background-size: cover;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+  justify-content: space-between;
+ align-items: start;
+ .ba-review{
+  display: inline-block;
+ }
+}
+.ba-link-cameras--no-center{
+ display: inline-block;
+ margin-bottom: 30px;
+ text-align: start;
+}
+.ba-wrap-footer{
+ padding: 30px 20px;
+ display: flex;
+ justify-content: space-between;
+}
+.ba-logo-footer{
+ font-size: 17px;
+ font-weight: 400;
+ color: $grey;
+ margin: 0;
+}
+.hide {
+ display: none;
+}
